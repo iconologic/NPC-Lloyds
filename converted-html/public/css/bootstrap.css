@@ -6298,8 +6298,20 @@ author: bootply.com
 body {
   padding-top: 50px;
 }
+hr {
+  margin: 100px 0;
+}
+.logo {
+  max-width: 225px;
+}
+.panel.coverage {
+  min-height: 400px;
+}
+.bold {
+  font-weight: bold;
+}
 #masthead {
-  min-height: 250px;
+  min-height: 100px;
 }
 #masthead h1 {
   font-size: 30px;

@@ -25,7 +25,7 @@
         "path": null,
         "extension": ".html",
         "ignoreUrls": null,
-        "relativePaths": false,
+        "relativePaths": true,
         "default": null
     },
     "followLeader": true,

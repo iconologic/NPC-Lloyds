@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <title>Mixture + Bootstrap</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
         
     </head>
     <body>
     
-        <nav class="navbar navbar-default navbar-fixed-top" role="banner">
+        <!-- <nav class="navbar navbar-default navbar-fixed-top" role="banner">
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,7 +18,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">NPC Benefits</a>
+      <a href="index.html" class="navbar-brand">NPC Benefits</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -37,7 +37,7 @@
       </ul>
     </nav>
   </div>
-</nav>
+</nav> -->
 
         <div class="container">
             
@@ -45,20 +45,20 @@
 	  <div class="container">
 	      <div class="row">
 	        <div class="col-md-7">
-	          <h1>Lorem Ipsum
-	            <p class="lead">possible tagline</p>
-	          </h1>
+	          <a href="index.html">
+	          	<img src="public/img/logo.jpg" class="logo well-lg">
+	          </a>
 	        </div>
 	        <!-- logo -->
 	        <div class="col-md-5">
-    <div class="well well-lg"> 
+    <div class="well-lg"> 
         <div class="row">
-          <div class="col-sm-6">
-            <img src="/public/img/logo.png" class="img-responsive">
+          <div class="col-sm-6 pull-right">
+            <img src="public/img/client-logo.png" class="img-responsive">
           </div>
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus temporibus harum doloribus incidunt fugit, possimus deleniti mollitia hic vitae sunt, pariatur ex dolore repellat cumque impedit dolorem velit tenetur.
-          </div>
+          </div> -->
         </div>
     </div>
 </div>
@@ -70,30 +70,31 @@
 		<div class="row">
       <!--left-->
       <div class="col-md-3" id="leftCol">
-  <!-- <ul class="nav nav-stacked" id="sidebar">
-    <li><a href="#"></a></li>
-    <li><a href="#">No Thanks</a></li>
-  </ul> -->
-
-  <div class="nav nav-stacked" id="sidebar">
-  	<button type="button" class="btn btn-primary btn-lg btn-block">Learn More</button>
-  	<button type="button" class="btn btn-danger btn-lg btn-block">No Thanks</button>
-  	<small>By clicking "No Thanks" you are waiving the new Lloyd's Disability Income Protection Plan</small>
+  <!--left-->
+  <div class="col-md-3" id="leftCol">
+    <ul class="nav nav-stacked" id="sidebar">
+      <li><a href="#sec0">Summary</a></li>
+      <li><a href="#sec1">Did you know?</a></li>
+      <li><a href="#sec2">Sample Policy</a></li>
+      <li><a href="#sec3">FAQ</a></li>
+    </ul>
   </div>
 </div>
 			<!--right-->
 			<div class="col-md-9">
   
-    <h2 id="sec0">Lloyd's Summary</h2>
+    <h2 id="sec0">Dear Association Member:</h2>
   <p>
     You are eligible for a new benefit through State Bar Association which can protect your income and retirement funds in the event of an illness or accident that prevents you from working. This new plan is offered by Lloyd's of London, owned by you, and is available with <u>no health questions or exams</u> during this initial enrollment period for eligible State Bar Association members.
   </p>
-  
-  <hr>
 
-  <p>
-    If you currently have disability insurance, you may have a base level of protection. Depending on your personal situation, that may not be sufficient to maintain all aspects of lifestyle, future goals and retirement funds.
-  </p>
+  <div class="signature pull-right text-right bold">
+    <span>Kate Smith</span><br>
+    <span>Executive Director, State Bar Association</span>
+  </div>
+  
+  <div class="clearfix"></div>
+  <br>
 
   <p>
     The illustrative graph below is designed to help you consider the following:
@@ -103,11 +104,16 @@
     <li>What coverage you currently have</li>
     <li>Determine whether your current coverage is sufficient or if you should consider the new Lloyd's Lump Sum Disability Protection Plan</li>
   </ol>
+  
+  <hr>
 
+  <p>
+    If you currently have disability insurance, you may have a base level of protection. Depending on your personal situation, that may not be sufficient to maintain all aspects of lifestyle, future goals and retirement funds.
+  </p>
   
   <div class="row">
     <div class="col-md-6">
-      <div class="panel panel-default">
+      <div class="panel panel-default coverage">
         <div class="panel-heading"><h3>Your Compensation</h3></div>
         <div class="panel-body">
           Includes both salary and any other forms of compensation such as bonus/incentive pay, K-1 proceeds if shareholder, etc.
@@ -115,13 +121,23 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="panel panel-default">
+      <div class="panel panel-default coverage">
         <div class="panel-heading"><h3>Current Coverage</h3></div>
         <div class="panel-body">
           NEW Disability Plan can provide a single lump sum of up to $2,000,000 to protect your income, retirement and lifestyle against the severe impact of a career-ending disability.
         </div>
       </div>
     </div>  
+  </div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-primary btn-lg btn-block">Learn More</button>
+    </div>
+    <div class="col-xs-6">
+      <button type="button" class="btn btn-danger btn-lg btn-block">No Thanks</button>
+      <small>By clicking "No Thanks" you are waiving the new Lloyd's Disability Income Protection Plan</small>
+    </div>
   </div>  
   <hr>
   
@@ -158,6 +174,8 @@
   Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut..</p>
 
   <button type="button" class="btn btn-default btn-lg">Download Sample Policy (PDF)</button>
+  <hr>
+  
   <h2 id="sec3">FAQ</h2>
 <p>
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
@@ -219,7 +237,7 @@
         </div>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
-        <script src="/public/js/bootstrap.min.js"></script>
-        <script src="/public/js/scripts.min.js"></script>
+        <script src="public/js/bootstrap.min.js"></script>
+        <script src="public/js/scripts.min.js"></script>
     </body>
 </html>
