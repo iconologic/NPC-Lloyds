@@ -1,0 +1,71 @@
+// GLOBAL
+body { 
+	line-height: 1.65
+}
+
+// HELPER CLASSES
+.no-margin { margin: 0 !important; }
+
+// FAQ
+.panel-group .panel {
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+	background-color: @npc-drkBlue;
+	border-color: @npc-drkBlue;
+	color: #fff;
+	border-radius: 0;
+
+	&.active {
+		background-color: @npc-ltBlue;
+	}
+}
+
+a.faq-toggle,
+a.collapsed,
+a.collapse { 
+	display: block;
+	text-decoration: none; 
+}
+
+.panel-heading:hover {
+  background-color: @npc-ltBlue !important;
+}
+
+// BUTTONS
+.btn { 
+	font-family: @font-family-serif;
+	border-radius: 0 !important;
+	border: 0;
+
+	&:focus {
+		outline: 0px !important;
+	}
+
+	.active:focus {
+		outline: 0;
+	}
+}
+
+.btn-primary.active,
+.btn-success:hover {
+	background-color: @npc-drkBlue;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	// border: 1px solid @npc-drkBlue;
+}
+
+#update-1.btn-primary.active {
+	background-color: @npc-ltGray;
+}
+
+#update-2.btn-primary.active {
+	background-color: @npc-drkBlue;
+}
+
+.btn-danger:hover {
+	background-color: @npc-gray;
+}

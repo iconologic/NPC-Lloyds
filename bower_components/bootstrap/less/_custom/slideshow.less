@@ -1,0 +1,106 @@
+/* CSS used here will be applied after bootstrap.css */
+
+#slide-controller,
+.my-progress-container {
+  display: none;
+}
+
+body { padding-top: 20px; }
+#myCarousel .nav a small {
+    display:block;
+}
+
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus {
+  background: #6c645e;
+}
+
+#myCarousel .nav {
+  background:#d7d3d1;
+  // display: none;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}
+
+.my-progress-container{
+  margin-top: 5px;
+  background:#e5edf7;
+}
+
+.my-progress-bar{
+  width:0%;
+  background: #88b3da;
+  height: 25px;
+  -webkit-transition: width 1s ease-in-out;
+  -moz-transition: width 1s ease-in-out;
+  -o-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+#myCarousel {
+  .item {
+    left: 0 !important;
+    .transition(opacity 4s);
+  }
+  .carousel-control {
+    background-image: none;
+  }
+  .next.left,
+  .prev.right {
+    opacity: 1;
+    z-index: 1;
+  }
+  .active.left,
+  .active.right {
+    opacity: 0;
+    z-index: 2;
+  }
+}
+
+#myCarousel .item {
+  -webkit-transition: opacity 3s; 
+  -moz-transition: opacity 3s; 
+  -ms-transition: opacity 3s; 
+  -o-transition: opacity 3s; 
+  transition: opacity 3s;
+}
+#myCarousel .active.left {left:0;opacity:0;z-index:2;}
+#myCarousel .next {left:0;opacity:1;z-index:1;}
+
+
+// .control-buttons{
+//   text-align:center;
+// }
+
+.transition-timer-carousel-progress-bar {
+  height: 3px;
+  background-color: #ccc !important;
+  width: 0%;
+  margin: 0px 0px 0px 0px;
+  border: none;
+  z-index: 11;
+  position: relative;
+}
+
+.carousel-inner,
+#carouselButtons,
+.transition-timer-carousel-progress-bar {
+  display: none;
+}
+
+#carouselButtons {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.slideCtrl {
+  background-color: #e4e1dc;
+  line-height: 30px;
+}
+
+// Controls
+#play {
+  display: none;
+}

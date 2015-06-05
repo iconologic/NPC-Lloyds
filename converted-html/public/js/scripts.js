@@ -1,4 +1,5 @@
 $(function () {
+
   /* activate sidebar */
   $('#sidebar').affix({
     offset: {
@@ -15,41 +16,45 @@ $(function () {
     offset: navHeight
   });
 
-  /* smooth scrolling sections */
-  // $('a[href*=#]:not([href=#])').click(function() {
-  //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  //       var target = $(this.hash);
-  //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-  //       if (target.length) {
-  //         $('html,body').animate({
-  //           scrollTop: target.offset().top - 50
-  //         }, 1000);
-  //         return false;
-  //       }
-  //     }
-  // });
-
   /* FAQ Accordion */
   $('.collapse').collapse()
 
-  /* Pie Chart */
-  google.setOnLoadCallback(drawChart);
-  function drawChart() {
+  var active = true;
+  $('#accordion').on('show.bs.collapse', function () {
+    if (active) $('#accordion .in').collapse('hide');
+  });
 
-    var data = google.visualization.arrayToDataTable([
-      ['Task', 'Hours per Day'],
-      ['Retirement/Investments', 50],
-      ['Other Savings', 25],
-      ['Assets', 25]
-    ]);
+  // $('.panel-heading').hover(function(){
+  //   $(this).toggleClass("active");
+  // });
+  
+  
+      // if($('.panel-heading').is(':hover') {
+      //     $(this).css({'background':'blue'});
+      // }
+      // else {
+      //     $('.panel-heading').css({'background':'red'});
+      // }
+  
+    // var $heading = $('.panel-heading');
 
-    var options = {
-      // title: 'If your career ended due to a health crisis'
-    };
+    // if($heading.is(":hover")) {
+    //   console.log("heading hover");
+    //    $heading.css("background", "yellow");
+    // }
+    // else {
+    //    $heading.css("background", "");
+    // }
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  $(function() {
+    $('#accordion')
+    .on('show.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').addClass('active');
+    })
+    .on('hide.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').removeClass('active');
+    });          
+  });
 
-    chart.draw(data, options);
-  }
-
+ 
 });

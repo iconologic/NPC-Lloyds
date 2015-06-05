@@ -1,0 +1,583 @@
+{% block content %}
+
+	<div id="masthead">  
+	  <div class="container">
+	      
+      <div class="col-md-7">
+        <a href="/">
+        	<img src="{{ "logo.jpg" | asset_url }}" class="logo well-lg">
+        </a>
+      </div>
+
+      <!-- logo -->
+      {% include "logo" %}
+	        
+	  </div><!--/container-->
+	</div><!--/masthead-->
+
+	<!--main-->
+	<div class="col-md-3"></div>
+	<div class="col-md-9">
+
+	      
+    <section>
+      <div id="slider-wrapper">
+      	<div id="layerslider" style="width:855px;height:350px;max-width: 855px;">
+
+      		<div class="ls-slide" data-ls="slidedelay:8000;transition2d:75,79;">
+
+      			<p class="ls-l" 
+      			style="top:25px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#636160;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:500;
+      			fadein:true;
+      			">
+      				This graphic represents your
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:50px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:500;
+      			fadein:true;
+      			">
+      			  whole take-home income
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:75px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#636160;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:500;
+      			fadein:true;
+      			">
+      				when working (after taxes)
+      			</p>
+
+      			<div class="ls-l"
+      				style="top:0px;
+      				left:500px;
+      				font-weight: 500;
+      				font-size:20px;
+      				line-height:25px;
+      				color:#99ccff;
+      				white-space: nowrap;" 
+      				data-ls="durationin:1000;
+      				delayin:1500;
+      				fadein:true;
+      				">
+
+      				<div class="chartOne chartOne2">
+      						<div class="chartOneSlice1 chartOneSlice-wrap"> </div>
+      						<div class="chartOneSlice2 chartOneSlice-wrap"> </div>
+      				</div>
+
+      			</div>
+
+      			<p class="ls-l" 
+      			style="top:125px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#636160;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:2500;
+      			fadein:true;
+      			">
+      				This may include multiple forms of <br> income, such as:
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:200px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:3000;
+      			fadein:true;
+      			">
+      			  &bull;&nbsp; Base salary
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:225px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:3500;
+      			fadein:true;
+      			">
+      			  &bull;&nbsp; Bonus/incentive pay
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:250px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:4000;
+      			fadein:true;
+      			">
+      			  &bull;&nbsp; K-1 or profit sharing
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:275px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:4500;
+      			fadein:true;
+      			">
+      			  &bull;&nbsp; Retirement contributions
+      			</p>
+
+      			<p class="ls-l" 
+      			style="top:300px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:20px;
+      			line-height:25px;
+      			color:#99ccff;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:5000;
+      			fadein:true;
+      			">
+      			  &bull;&nbsp; Other earned compensation
+      			</p>
+      		</div>
+
+      		<div class="ls-slide" data-ls="slidedelay:8000;transition2d:75,79;">
+
+      			<p class="ls-l" 
+      			style="top:25px;
+      			left:25px;
+      			font-weight: 500;
+      			font-size:25px;
+      			line-height:30px;
+      			color:#636160;
+      			white-space: nowrap;" 
+      			data-ls="durationin:1500;
+      			delayin:500;
+      			fadein:true;
+      			">
+      				What would your income look
+              <br>like if you were unable to work
+              <br>due to an
+      			</p>
+
+            <p class="ls-l" 
+            style="top:83px;
+            left:143px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:1000;
+            fadein:true;
+            ">
+              illness or accident?
+            </p>
+
+      			<div class="ls-l"
+      				style="top:0px;
+      				left:500px;
+      				font-weight: 500;
+      				font-size:25px;
+      				line-height:30px;
+      				color:#99ccff;
+      				white-space: nowrap;" 
+      				data-ls="durationin:1000;
+      				delayin:1500;
+      				fadein:true;
+      				">
+
+      				<div class="chartTwo chartTwo2">
+                  <div class="chartTwoSlice1 chartTwoSlice-wrap"> </div>
+                  <div class="chartTwoSlice2 chartTwoSlice-wrap"> </div>
+              </div>
+
+      			</div>
+
+            <p class="ls-l" 
+            style="top:150px;
+            left:25px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:500;
+            delayin:3500;
+            fadein:true;
+            ">
+              You may have some disability coverage
+              <br>to provide a base level of cash flow.
+            </p>
+
+            <p class="ls-l" 
+            style="top:210px;
+            left:25px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:5000;
+            fadein:true;
+            ">
+              But how much?
+            </p>
+          </div> 
+
+          <div class="ls-slide" data-ls="slidedelay:8000;transition2d:75,79;">
+
+            <p class="ls-l" 
+            style="top:25px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:500;
+            fadein:true;
+            ">
+              A personal income protection plan
+            </p>
+
+            <p class="ls-l" 
+            style="top:25px;
+            left:350px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:500;
+            fadein:true;
+            ">
+              can offer
+            </p>
+
+            <p class="ls-l" 
+            style="top:50px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:500;
+            fadein:true;
+            ">
+              significant additional income closer to your
+              <br>whole income, which supports so many
+              <br>other things such as:
+            </p>
+
+            <p class="ls-l" 
+            style="top:140px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:1500;
+            fadein:true;
+            ">
+              &bull;&nbsp; Family
+            </p>
+
+            <p class="ls-l" 
+            style="top:165px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:2000;
+            fadein:true;
+            ">
+              &bull;&nbsp; Lifestyle
+            </p>
+
+            <p class="ls-l" 
+            style="top:190px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:2500;
+            fadein:true;
+            ">
+              &bull;&nbsp; Home and all other expenses
+            </p>
+
+            <p class="ls-l" 
+            style="top:215px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:3000;
+            fadein:true;
+            ">
+              &bull;&nbsp; Retirement and savings
+            </p>
+
+            <p class="ls-l" 
+            style="top:265px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:5000;
+            fadein:true;
+            ">
+              Lloyd's
+            </p>
+
+            <p class="ls-l" 
+            style="top:265px;
+            left:98px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:5000;
+            fadein:true;
+            ">
+              fills in your income gap, helping
+            </p>
+
+            <p class="ls-l" 
+            style="top:290px;
+            left:25px;
+            font-weight: 500;
+            font-size:20px;
+            line-height:25px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:1500;
+            delayin:5000;
+            fadein:true;
+            ">
+              you preserve the life you're used to.
+            </p>
+
+            <img class="ls-l" 
+            style="top:25px;
+            left:530px;
+            font-weight: 500;
+            font-size:30px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;
+            width: 300px" 
+            data-ls="durationin:1000;
+            delayin:1500;
+            fadein:true;
+            offsetxin: 0;"
+            src="{{ "chart.png" | asset_url}}" />
+
+            <img class="ls-l" 
+            style="top:25px;
+            left:530px;
+            font-weight: 500;
+            font-size:30px;
+            line-height:25px;
+            color:#99ccff;
+            white-space: nowrap;
+            width: 300px" 
+            data-ls="durationin:1500;
+            delayin:5000;
+            fadein:true;
+            offsetxin: 0;
+            durationout:0;"
+            src="{{ "chart-2.png" | asset_url}}" />
+          </div> 
+
+          <div class="ls-slide" data-ls="slidedelay:8000;transition2d:75,79;">
+
+            <img class="ls-l" 
+            style="top:25px;
+            left:25px;
+            font-weight: 500;
+            font-size:30px;
+            line-height:30px;
+            color:#99ccff;
+            white-space: nowrap;
+            width:300px" 
+            data-ls="durationin:1300;
+            delayin:0;
+            fadein:false;
+            offsetxin: 505;"
+            src="{{ "chart-2.png" | asset_url}}" />
+
+            <p class="ls-l" 
+            style="top:125px;
+            left:190px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#fff;
+            white-space: nowrap;" 
+            data-ls="durationin:2000;
+            delayin:1000;
+            fadein:true;
+            ">
+              Lloyd's
+              <br>Protection  
+              <br>Plan
+            </p>
+
+            <p class="ls-l" 
+            style="top:75px;
+            left:350px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#636160;
+            white-space: nowrap;" 
+            data-ls="durationin:3000;
+            delayin:1000;
+            fadein:true;
+            ">
+              Lloyd's provides the ability to meet your
+              <br>finanicial goals &mdash;
+            </p>
+
+            <p class="ls-l" 
+            style="top:105px;
+            left:560px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:4000;
+            delayin:1000;
+            fadein:true;
+            ">
+              no matter what the
+            </p>
+
+            <p class="ls-l" 
+            style="top:130px;
+            left:350px;
+            font-weight: 500;
+            font-size:25px;
+            line-height:30px;
+            color:#99ccff;
+            white-space: nowrap;" 
+            data-ls="durationin:4500;
+            delayin:1000;
+            fadein:true;
+            ">
+              future may hold.
+            </p>
+
+            <button class="ls-l" 
+            style="top:190px;
+            left:350px;
+            font-weight: 500;
+            font-size:20px;
+            text-align:center;
+            padding: 10px 95px;
+            line-height:20px;
+            color:#fff;
+            white-space: nowrap;
+            background-color: #6c645e;" 
+            data-ls="durationin:6500;
+            offsetxin:2000;
+            delayin:1000;
+            fadein:false;
+            ">
+              Click here to see your<br>personal cost/benefit options
+            </button>
+          </div>
+
+
+      	</div>
+      </div>
+      
+      <!-- Controls -->
+			<button id="prev" class="col-sm-4 btn">
+        <span class="glyphicon glyphicon-step-backward"></span>
+      </button>
+			
+      <button id="pause" class="col-sm-4 btn">
+        <span class="glyphicon glyphicon-pause"></span>
+      </button>
+			
+      <button id="play" class="col-sm-4 btn">
+        <span class="glyphicon glyphicon-play"></span>
+      </button>
+
+      <button id="next" class="col-sm-4 btn">
+        <span class="glyphicon glyphicon-step-forward"></span>
+      </button>
+    </section>
+
+    <hr>
+
+	</div><!--/container-->
+
+{% endblock %}

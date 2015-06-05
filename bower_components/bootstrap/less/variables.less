@@ -20,6 +20,16 @@
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
+// CUSTOM NPC COLORS
+@npc-ltBlue: 		#99CCFF;
+@npc-drkBlue: 	#6699CC;
+@npc-ltGray: 		#B4B4B4;
+@npc-gray: 			#787878;
+@npc-drkGray: 	#646464;
+@npc-drkGray2: 	#6B635D;
+@npc-drkGray3: 	#636160;
+
+
 
 //== Scaffolding
 //
@@ -28,7 +38,7 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @npc-gray;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -42,13 +52,13 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "raleway", Helvetica, Arial, sans-serif;
+@font-family-serif:       "playfair", "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          16px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -65,10 +75,10 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
+@headings-font-family:    @font-family-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          @npc-drkGray3;
 
 
 //== Iconography
@@ -149,11 +159,11 @@
 @btn-default-border:             #ccc;
 
 @btn-primary-color:              #fff;
-@btn-primary-bg:                 @brand-primary;
+@btn-primary-bg:                 @npc-gray;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 @btn-success-color:              #fff;
-@btn-success-bg:                 @brand-success;
+@btn-success-bg:                 @npc-ltBlue;
 @btn-success-border:             darken(@btn-success-bg, 5%);
 
 @btn-info-color:                 #fff;
@@ -165,7 +175,7 @@
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
 
 @btn-danger-color:               #fff;
-@btn-danger-bg:                  @brand-danger;
+@btn-danger-bg:                  @npc-ltGray;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 
 @btn-link-disabled-color:        @gray-light;

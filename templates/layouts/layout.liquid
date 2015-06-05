@@ -2,14 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>{% block title %}Mixture + Bootstrap{% endblock %}</title>
+        <title>{% block title %}L{% endblock %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
         {{ "bootstrap.css" | asset_url | stylesheet_tag }}
+        {{ "layerslider.css" | asset_url | stylesheet_tag }}
         
     </head>
     <body>
     
-        <!-- {% include "navigation" %} -->
+        {% include "navigation" %}
 
         <div class="container">
             {% block content %}{% endblock %}
@@ -18,5 +24,13 @@
         <script src="//code.jquery.com/jquery.min.js"></script>
         {{ "bootstrap.js" | asset_url | script_tag }}
         {{ "scripts.js" | asset_url | script_tag }}
+        {{ "chart.js" | asset_url | script_tag }}
+        <!-- {{ "chart-settings.js" | asset_url | script_tag }} -->
+        {{ "slideshow-v4.js" | asset_url | script_tag }}
+
+        {{ "greensock.js" | asset_url | script_tag }}
+        {{ "layerslider.transitions.js" | asset_url | script_tag }}
+        {{ "layerslider.kreaturamedia.jquery.js" | asset_url | script_tag }}
+
     </body>
 </html>

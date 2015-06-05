@@ -1,0 +1,132 @@
+/* based on http://www.kylejlarson.com/blog/2011/how-to-create-pie-charts-with-css3/ */
+.chartThree {
+	height: 200px;
+	position:relative;
+	margin:20px
+}
+.chartThree:before  {
+	content:"";
+	display:block;
+	background-color:blue;
+	position: absolute;
+	border-radius: 50%;
+	width:200px;
+	height:200px;
+	top:0;
+	left:0;
+}
+.chartThree:after{/* remove this if you want pie shape to show*/
+	content:" ";
+	width:80px;
+	height:80px;
+	background:#fde3a7;
+	position:absolute;
+	top:10px;
+	left:10px;	
+	border-radius:50%;
+	z-index:999;
+} 
+.chartThree2:after{display:none}
+
+.chartThreeSlice-wrap:before {
+	content:" ";
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	clip: rect(0px, 100px, 200px, 0px);
+	background-color:red;
+	-webkit-transform:rotate(135deg);
+	-moz-transform:rotate(135deg);
+	-o-transform:rotate(135deg);
+	-ms-transform:rotate(135deg);
+	transform:rotate(135deg);
+}
+
+.chartThreeSlice-wrap {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	clip: rect(0px, 200px, 200px, 100px);
+}
+.chartThreeSlice1.chartThreeSlice-wrap {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+.chartThreeSlice2:before {
+	-webkit-animation: 2s pie-three linear forwards;
+	-moz-animation: 2s pie-three linear forwards;
+	-o-animation: 2s pie-three linear forwards;
+	-ms-animation: 2s pie-three linear forwards;
+	animation: 2s pie-three linear forwards;
+	animation-delay: 3s;
+}
+.chartThreeSlice1:before {
+	-webkit-transform:rotate(0.00001deg);/* webkit seems buggy with zero*/
+	-moz-transform:rotate(0.00001deg);
+	-o-transform:rotate(0.00001deg);
+	-ms-transform:rotate(0.00001deg);
+	transform:rotate(0.00001deg);
+	-webkit-animation: 2s pie-three2 linear 2s forwards;
+	-moz-animation: 2s pie-three2 linear 2s forwards;
+	-ms-animation: 2s pie-three2 linear 2s forwards;
+	-o-animation: 2s pie-three2 linear 2s forwards;
+	animation: 2s pie-three2 linear 2s forwards;
+	animation-delay: 5s;
+}
+
+
+@-webkit-keyframes pie-three {
+	from {-webkit-transform: rotate(135deg);}
+	to {-webkit-transform: rotate(180deg);}
+}
+@-webkit-keyframes pie-three2 {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(180deg);}
+}
+
+// DEFAULT PREFIXES
+// @-webkit-keyframes pie-three {
+//  from {-webkit-transform: rotate(10deg);}
+// to {-webkit-transform: rotate(180deg);}
+// }
+// @-webkit-keyframes pie-three2 {
+// 	from {-webkit-transform: rotate(0deg);}
+// 	to {-webkit-transform: rotate(144deg);}
+// }
+// @-moz-keyframes pie-three {
+//  from {-moz-transform: rotate(10deg);}
+// to {-moz-transform: rotate(180deg);}
+// }
+// @-moz-keyframes pie-three2 {
+// 	from {-moz-transform: rotate(0deg);}
+// 	to {-moz-transform: rotate(144deg);}
+// }
+// @-ms-keyframes pie-three {
+//  from {-ms-transform: rotate(10deg);}
+// to {-ms-transform: rotate(180deg);}
+// }
+// @-ms-keyframes pie-three2 {
+// 	from {-ms-transform: rotate(0deg);}
+// 	to {-ms-transform: rotate(144deg);}
+// }
+// @-o-keyframes pie-three {
+//  from {-o-transform: rotate(10deg);}
+// to {-o-transform: rotate(180deg);}
+// }
+// @-o-keyframes pie-three2 {
+// 	from {-o-transform: rotate(0deg);}
+// 	to {-o-transform: rotate(144deg);}
+// }
+// @keyframes pie-three {
+//  from {transform: rotate(10deg);}
+// to {transform: rotate(180deg);}
+// }
+// @keyframes pie-three2 {
+// 	from {transform: rotate(0deg);}
+// 	to {transform: rotate(144deg);}
+// }
