@@ -2,9 +2,17 @@ $(function () {
 	jQuery("#layerslider").layerSlider({
 	  pauseOnHover: false,
 	  autoPlayVideos: false,
+	  autoStart : false,
 	  skinsPath: '../public/css/',
 	  loops: 1
 	});
+
+	//START SLIDER
+	$('button#start-slider').click(function(){
+	  $('#layerslider').layerSlider('start');
+	  $('button#play').hide();
+	  $('button#pause').show();
+	});;
 
 	// BACK
 	$('button#prev').click(function(){
