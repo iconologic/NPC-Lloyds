@@ -6416,6 +6416,9 @@ a.collapse {
 .btn-danger:hover {
   background-color: #787878;
 }
+.blue {
+  color: #99ccff;
+}
 /* CSS used here will be applied after bootstrap.css */
 #slide-controller,
 .my-progress-container {
@@ -6509,7 +6512,7 @@ body {
   background-color: #e4e1dc;
   line-height: 30px;
 }
-#play {
+#pause {
   display: none;
 }
 button {
@@ -6572,7 +6575,7 @@ button.ls-l:hover {
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  clip: rect(0px, 300px, 300px, 150px);
+  clip: rect(0px, 300px, 300px, 149px);
 }
 .chartOneSlice2.chartOneSlice-wrap {
   -webkit-transform: rotate(180deg);
@@ -6717,12 +6720,12 @@ button.ls-l:hover {
     width: 250px;
     height: 250px;
     border-radius: 125px;
-    clip: rect(0px, 250px, 250px, 125px);
+    clip: rect(0px, 250px, 250px, 124px);
   }
 }
 @media (max-width: 768px) {
   .chartOne {
-    height: 150px;
+    height: 100px;
     position: relative;
     margin: 20px;
   }
@@ -6732,31 +6735,28 @@ button.ls-l:hover {
     background-color: white;
     position: absolute;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     top: 0;
     left: 0;
   }
   .chartOneSlice-wrap:before {
     content: " ";
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 75px;
-    clip: rect(0px, 150px, 150px, 0px);
+    clip: rect(0px, 100px, 100px, 0px);
     background-color: #9bb5cb;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   .chartOneSlice-wrap {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 75px;
-    clip: rect(0px, 150px, 250px, 75px);
+    clip: rect(0px, 100px, 250px, 49px);
   }
 }
 /* based on http://www.kylejlarson.com/blog/2011/how-to-create-pie-charts-with-css3/ */
@@ -6799,10 +6799,6 @@ button.ls-l:hover {
   border-radius: 150px;
   clip: rect(0px, 150px, 300px, 0px);
   background-color: #ffffff;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 .chartTwoSlice-wrap {
@@ -6813,31 +6809,14 @@ button.ls-l:hover {
   clip: rect(0px, 300px, 300px, 150px);
 }
 .chartTwoSlice2.chartTwoSlice-wrap {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .chartTwoSlice1:before {
-  -webkit-animation: 2s pie-two linear forwards;
-  -moz-animation: 2s pie-two linear forwards;
-  -o-animation: 2s pie-two linear forwards;
-  -ms-animation: 2s pie-two linear forwards;
   animation: 2s pie-two linear forwards;
   animation-delay: 3s;
 }
 .chartTwoSlice2:before {
-  -webkit-transform: rotate(0.00001deg);
-  /* webkit seems buggy with zero*/
-  -moz-transform: rotate(0.00001deg);
-  -o-transform: rotate(0.00001deg);
-  -ms-transform: rotate(0.00001deg);
   transform: rotate(0.00001deg);
-  -webkit-animation: 2s pie-two2 linear 2s forwards;
-  -moz-animation: 2s pie-two2 linear 2s forwards;
-  -ms-animation: 2s pie-two2 linear 2s forwards;
-  -o-animation: 2s pie-two2 linear 2s forwards;
   animation: 2s pie-two2 linear 2s forwards;
   animation-delay: 5s;
 }
@@ -6866,7 +6845,7 @@ button.ls-l:hover {
   .chartTwo:before {
     content: "";
     display: block;
-    background-color: white;
+    background-color: #9bb5cb;
     position: absolute;
     border-radius: 50%;
     width: 250px;
@@ -6874,64 +6853,64 @@ button.ls-l:hover {
     top: 0;
     left: 0;
   }
+  .chartTwoSlice-wrap {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    clip: rect(0px, 250px, 250px, 125px);
+  }
   .chartTwoSlice-wrap:before {
     content: " ";
     position: absolute;
     width: 250px;
     height: 250px;
-    border-radius: 125px;
-    clip: rect(0px, 250px, 250px, 0px);
-    background-color: #9bb5cb;
+    border-radius: 150px;
+    clip: rect(0px, 125px, 250px, 0px);
+    background-color: #fff;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  .chartTwoSlice-wrap {
-    position: absolute;
-    width: 250px;
-    height: 250px;
-    border-radius: 125px;
-    clip: rect(0px, 250px, 250px, 125px);
-  }
 }
 @media (max-width: 768px) {
   .chartTwo {
-    height: 150px;
+    height: 100px;
     position: relative;
     margin: 20px;
   }
   .chartTwo:before {
     content: "";
     display: block;
-    background-color: white;
+    background-color: #9bb5cb;
     position: absolute;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     top: 0;
     left: 0;
+  }
+  .chartTwoSlice-wrap {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+    clip: rect(0px, 150px, 250px, 50px);
   }
   .chartTwoSlice-wrap:before {
     content: " ";
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 75px;
-    clip: rect(0px, 150px, 150px, 0px);
-    background-color: #9bb5cb;
+    clip: rect(0px, 50px, 250px, 0px);
+    background-color: #fff;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
-  }
-  .chartTwoSlice-wrap {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 75px;
-    clip: rect(0px, 150px, 250px, 75px);
   }
 }
