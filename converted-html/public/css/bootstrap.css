@@ -6575,7 +6575,7 @@ button.ls-l:hover {
   width: 300px;
   height: 300px;
   border-radius: 150px;
-  clip: rect(0px, 300px, 300px, 150px);
+  clip: rect(0px, 300px, 300px, 148px);
 }
 .chartOneSlice2.chartOneSlice-wrap {
   -webkit-transform: rotate(180deg);
@@ -6720,7 +6720,7 @@ button.ls-l:hover {
     width: 250px;
     height: 250px;
     border-radius: 125px;
-    clip: rect(0px, 250px, 250px, 125px);
+    clip: rect(0px, 250px, 250px, 124px);
   }
 }
 @media (max-width: 768px) {
@@ -6759,7 +6759,7 @@ button.ls-l:hover {
     width: 100px;
     height: 100px;
     border-radius: 75px;
-    clip: rect(0px, 100px, 250px, 50px);
+    clip: rect(0px, 100px, 250px, 49px);
   }
 }
 /* based on http://www.kylejlarson.com/blog/2011/how-to-create-pie-charts-with-css3/ */
@@ -6810,8 +6810,8 @@ button.ls-l:hover {
 }
 .chartTwoSlice-wrap {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 301px;
+  height: 301px;
   border-radius: 150px;
   clip: rect(0px, 300px, 300px, 150px);
 }
@@ -6858,6 +6858,70 @@ button.ls-l:hover {
   }
   to {
     -webkit-transform: rotate(45deg);
+  }
+}
+@-moz-keyframes pie-two {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+  }
+}
+@-moz-keyframes pie-two2 {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(45deg);
+  }
+}
+@-ms-keyframes pie-two {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(180deg);
+  }
+}
+@-ms-keyframes pie-two2 {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(45deg);
+  }
+}
+@-o-keyframes pie-two {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(180deg);
+  }
+}
+@-o-keyframes pie-two2 {
+  from {
+    -o-transform: rotate(0deg);
+  }
+  to {
+    -o-transform: rotate(45deg);
+  }
+}
+@keyframes pie-two {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes pie-two2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
   }
 }
 @media (max-width: 1200px) {
