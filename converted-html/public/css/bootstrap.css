@@ -6299,7 +6299,7 @@ body {
   padding-top: 50px;
 }
 hr {
-  margin: 50px 0;
+  margin: 30px 0;
 }
 .logo {
   max-width: 225px;
@@ -6345,27 +6345,30 @@ hr {
 .affix {
   position: static;
 }
-@media (min-width: 979px) {
-  #sidebar.affix-top {
-    position: static;
-    margin-top: 30px;
-    width: 195px;
-  }
-  #sidebar.affix {
-    position: fixed;
-    top: 70px;
-    width: 195px;
-  }
-}
 #sidebar li.active {
-  border: 0 #eee solid;
+  border: 0 #99ccff solid;
   border-right-width: 5px;
 }
 body {
   line-height: 1.65;
 }
+hr {
+  margin: 20px 0;
+}
+h2 {
+  margin-top: -7px;
+}
+.calc-label {
+  text-align: left !important;
+}
 .no-margin {
   margin: 0 !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.italic {
+  font-style: italic;
 }
 .panel-group .panel {
   border-radius: 0;
@@ -6418,6 +6421,13 @@ a.collapse {
 }
 .blue {
   color: #99ccff;
+}
+.warning {
+  color: red;
+  font-size: 12px;
+  display: none;
+  margin: 0;
+  padding: 0;
 }
 /* CSS used here will be applied after bootstrap.css */
 #slide-controller,
@@ -6515,6 +6525,25 @@ body {
 #pause {
   display: none;
 }
+.panel-container {
+  margin: 0 auto;
+}
+#footer-nav {
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.btn-sidebar {
+  font-size: 16px;
+}
+#sidebarEnrollContainer {
+  background: #6c645e;
+  padding: 25px;
+  color: #fff;
+}
+.footer-panel-heading:hover {
+  background-color: #888 !important;
+}
 button {
   border: none !important;
   outline: 0 !important;
@@ -6523,6 +6552,34 @@ button.ls-l:hover {
   border: none !important;
   outline: 0 !important;
   background-color: #bab0a2 !important;
+}
+.btn-group {
+  display: block !important;
+}
+#step2,
+#result,
+#enroll,
+#waive,
+#phraseOne,
+#phraseTwo,
+#phraseThree,
+#phraseFour,
+#optionalCoverage {
+  display: none;
+}
+.varOne,
+.varTwo,
+.varThree,
+.varFour,
+.varFive,
+.varSix,
+.varSeven,
+.varEight {
+  font-weight: bold;
+  color: #6699cc;
+}
+.calcText {
+  font-size: 20px;
 }
 /* based on http://www.kylejlarson.com/blog/2011/how-to-create-pie-charts-with-css3/ */
 .chartOne {

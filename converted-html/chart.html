@@ -32,13 +32,16 @@
           <a href="#sec0">Overview</a>
         </li>
         <li>
-          <a href="#sec1">Know Your Gap</a>
+          <a href="#sec1">Income Gap Calculator</a>
         </li>
         <li>
-          <a href="#sec2">Sample Policy</a>
+          <a href="#sec2">Coverage Options</a>
         </li>
         <li>
-          <a href="#sec3">FAQ</a>
+          <a href="#sec3">Sample Policy</a>
+        </li>
+        <li>
+          <a href="#sec4">FAQ</a>
         </li>
       </ul>
     </nav>
@@ -586,6 +589,17 @@
         </div>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <script>
+            // Allow ONLY Numbers in Textarea
+            function checkInput(ob) {
+              var invalidChars = /[^0-9]/gi
+              if(invalidChars.test(ob.value)) {
+                ob.value = ob.value.replace(invalidChars,"");
+              }
+            }
+        </script>
+        
         <script src="public/js/bootstrap.min.js"></script>
         <script src="public/js/scripts.min.js"></script>
         <script src="public/js/chart.min.js"></script>

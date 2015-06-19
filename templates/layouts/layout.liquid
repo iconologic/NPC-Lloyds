@@ -22,6 +22,17 @@
         </div>
 
         <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <script>
+            // Allow ONLY Numbers in Textarea
+            function checkInput(ob) {
+              var invalidChars = /[^0-9]/gi
+              if(invalidChars.test(ob.value)) {
+                ob.value = ob.value.replace(invalidChars,"");
+              }
+            }
+        </script>
+        
         {{ "bootstrap.js" | asset_url | script_tag }}
         {{ "scripts.js" | asset_url | script_tag }}
         {{ "chart.js" | asset_url | script_tag }}
