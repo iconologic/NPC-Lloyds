@@ -985,7 +985,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "playfair", "Times New Roman", Times, serif;
+  font-family: "raleway", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: #636160;
@@ -6394,7 +6394,7 @@ a.collapse {
   background-color: #99ccff !important;
 }
 .btn {
-  font-family: "playfair", "Times New Roman", Times, serif;
+  font-family: "raleway", Helvetica, Arial, sans-serif;
   border-radius: 0 !important;
   border: 0;
 }
@@ -6430,6 +6430,14 @@ a.collapse {
   padding: 0;
 }
 /* CSS used here will be applied after bootstrap.css */
+.btnControls {
+  background-color: #fff;
+  border-top: 1px solid #eee !important;
+  border-bottom: 1px solid #eee !important;
+}
+.controlContainer {
+  margin-bottom: 30px;
+}
 #slide-controller,
 .my-progress-container {
   display: none;

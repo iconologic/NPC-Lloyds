@@ -586,15 +586,17 @@
       line-height:30px;
       color:#636160;
       white-space: nowrap;" 
-      data-ls="durationin:500;
+      data-ls="durationin:1500;
       delayin:3500;
       fadein:true;
       ">
-        You may have some disability coverage
-        <br>to provide a base level of cash flow.
+        You may have some disability insurance, 
+        <br>but traditional plans only cover a fraction 
+        <br>of your base salary and may be taxable, 
+        <br>resulting in an income gap.
       </p>
 
-      <p class="ls-l" 
+      <!-- <p class="ls-l" 
       style="top:210px;
       left:25px;
       font-weight: 500;
@@ -607,7 +609,7 @@
       fadein:true;
       ">
         But how much?
-      </p>
+      </p> -->
     </div>
 
     <div class="ls-slide" data-ls="slidedelay:4000;transition2d:75,79;">
@@ -1015,26 +1017,27 @@
 </div>
 
 <!-- Controls -->
-<button id="prev" class="col-sm-4 btn">
-  <span class="glyphicon glyphicon-step-backward"></span>
-</button>
+<div class="controlContainer">
+  <button id="prev" class="col-sm-4 btn btnControls">
+    <span class="glyphicon glyphicon-step-backward"></span>
+  </button>
 
-<button id="pause" class="col-sm-4 btn">
-  <span class="glyphicon glyphicon-pause"></span>
-</button>
+  <button id="pause" class="col-sm-4 btn btnControls">
+    <span class="glyphicon glyphicon-pause"></span>
+  </button>
 
-<button id="play" class="col-sm-4 btn">
-  <span class="glyphicon glyphicon-play"></span>
-</button>
+  <button id="play" class="col-sm-4 btn btnControls">
+    <span class="glyphicon glyphicon-play"></span>
+  </button>
 
-<button id="next" class="col-sm-4 btn">
-  <span class="glyphicon glyphicon-step-forward"></span>
-</button>
+  <button id="next" class="col-sm-4 btn btnControls">
+    <span class="glyphicon glyphicon-step-forward"></span>
+  </button>
+</div>
 
-<div class="clearfix"></div>
+<div class="clearfix" style="margin-bottom:30px;"></div>
 
 <!-- { include "graph" } -->
-			  <hr>
 			  <!--   <h2 id="sec0">Dear association member,</h2>
   <p>
     Most wage earners believe they have a 2% or less chance of being disabled for three months or more during their career, when in reality, the odds for an employee entering the workforce today are about 25%. For this reason, I encourage you to consider thoroughly your option to enroll in this income protection opportunity the State Bar Association has made available to you.
@@ -1084,9 +1087,9 @@
     <div class="col-sm-8">
     	<p class="text-center">Decide Now</p>
 
-        <div class="col-md-6"><button id="waive-footer" name="singlebutton" class="btn btn-block btn-lg btn-danger">Waive Coverage</button></div>
+        <div class="col-md-6"><button id="waive-footer" name="singlebutton" class="btn btn-block btn-lg btn-danger">Decline Coverage</button></div>
 
-    	<div class="col-md-6"><button id="enroll-footer" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll Now</button></div>
+    	<div class="col-md-6"><button id="enroll-footer" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll</button></div>
 
     	
 
