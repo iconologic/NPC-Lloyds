@@ -276,7 +276,7 @@ $(function () {
     $('.varSix').html('$' + lumpSumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('#phraseTwo').show();
-    $('#phraseFour').show();
+    // $('#phraseFour').show();
   });
 
   function annualIncome(){
