@@ -124,7 +124,7 @@ $(function () {
         $('.incomeFour').hide(); 
         $('.incomeFive').hide();
         $('.incomeSix').hide();
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
 
       if($('#coverageAgeRangeDropdown').val() == '40') {
@@ -136,7 +136,7 @@ $(function () {
         $('.incomeFour').hide(); 
         $('.incomeFive').hide();
         $('.incomeSix').hide();
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
 
       if($('#coverageAgeRangeDropdown').val() == '45') {
@@ -148,7 +148,7 @@ $(function () {
         $('.incomeFour').hide();
         $('.incomeFive').hide();
         $('.incomeSix').hide(); 
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
 
       if($('#coverageAgeRangeDropdown').val() == '50') {
@@ -160,7 +160,7 @@ $(function () {
         $('.incomeFour').show(); 
         $('.incomeFive').hide();
         $('.incomeSix').hide();
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
 
       if($('#coverageAgeRangeDropdown').val() == '55') {
@@ -172,7 +172,7 @@ $(function () {
         $('.incomeFour').hide(); 
         $('.incomeFive').show();
         $('.incomeSix').hide();
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
 
       if($('#coverageAgeRangeDropdown').val() == '60') {
@@ -184,7 +184,7 @@ $(function () {
         $('.incomeFour').hide(); 
         $('.incomeFive').hide();
         $('.incomeSix').show();
-        $('#enroll, #waive').show();
+        $('#footer-enroll').show();
       }
   });
   
@@ -226,6 +226,7 @@ $(function () {
 
   });
 
+  // Default to "NO" on load and show text.
   $("#checkboxes-1").prop("checked", true);
 
   // Find Retirement Age
@@ -266,9 +267,13 @@ $(function () {
     age = yearsCovered(getAge);
     annualIncomeTotal = $('#calcIncome').val();
 
-    annualIncomeTotalInteger = parseInt(annualIncomeTotal);
+    annualIncomeTotalInteger = (annualIncomeTotal);
 
-    $('.varFour').html('$' + annualIncomeTotalInteger.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    var varFour = $('.varFour').html('$' + annualIncomeTotalInteger.toLocaleString("en").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+    
+
+    // console.log( varFour.slice( -1 ) );
+
     monthlyIncomeTotal = annualIncomeTotal / 12;
         
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
@@ -277,6 +282,13 @@ $(function () {
     $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('#phraseTwo').show();
     // $('#phraseFour').show();
+
+    var phraseCheck = $("#checkboxes-1");
+
+    if (phraseCheck[0].checked){
+      $('#phraseFour').show();
+    };
+
   });
 
   function annualIncome(){
@@ -295,7 +307,7 @@ $(function () {
 
     additionalPlans = $('#calcPlans').val();
     additionalPlansText = parseInt(additionalPlans);
-    $('.varFive').html('$' + additionalPlansText.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varFive').html('$' + additionalPlansText.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
 
@@ -307,7 +319,7 @@ $(function () {
 
     a = annualIncomeTotalInteger / 12;
     // console.log('a= ' + a);
-    b = additionalPlans / 12;
+    b = additionalPlans;
     // console.log('b= ' + b);
     c = a - b;
     // console.log('c= ' + c);

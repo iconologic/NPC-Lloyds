@@ -6655,7 +6655,8 @@ button.ls-l:hover {
 #phraseTwo,
 #phraseThree,
 #phraseFour,
-#optionalCoverage {
+#optionalCoverage,
+#footer-enroll {
   display: none;
 }
 .varOne,

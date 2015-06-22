@@ -83,23 +83,23 @@
   <div class="col-md-12" id="leftCol">
     <ul class="nav nav-stacked" id="sidebar">
       <li >
-        <a href="../natle/index.html">Overview</a>
+        <a href="../index.html">Overview</a>
       </li>
       <li >
-        <a href="../natle/gap-calculator.html">Income Gap Calculator</a>
+        <a href="../gap-calculator.html">Income Gap Calculator</a>
       </li>
       <li >
-        <a href="../natle/coverage-options.html">Your Coverage Options</a>
+        <a href="../coverage-options.html">Your Coverage Options</a>
       </li>
       <li >
-        <a href="../natle/sample-policy.html">Sample Policy</a>
+        <a href="../sample-policy.html">Sample Policy</a>
       </li>
       <li >
-        <a href="../natle/faq.html">FAQ</a>
+        <a href="../faq.html">FAQ</a>
       </li>
-      <li>
+      <!-- <li>
         <a href="#">Enroll Now</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- <div style="margin-bottom:25px;"></div>
@@ -382,42 +382,71 @@
       </tbody>
     </table>
 
-    <div class="col-md-6"><button id="waive" name="singlebutton" class="btn btn-block btn-lg btn-danger">Waive Coverage</button></div>
+    <div class="clearfix"></div>
+    <div id="footer-enroll" class="panel panel-primary">
+  <div class="panel-heading footer-panel-heading">
+    <h3 class="panel-title text-center" style="font-size:22px;">Enroll or Decline Coverage</h3>
+  </div>
+  <div class="panel-body">
+    <div class="col-sm-4">
+        <div class="panel-container">
+            <p>Keep Researching</p>
 
-    <div class="col-md-6"><button id="enroll" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll Now</button></div>
+            <select name="footer-nav" id="footer-nav" class="col-sm-12">
+                <option value="">Select A Category</option>
+                <option value="index.html">Overview</option>
+                <option value="gap-calculator.html">Income Gap Calculator</option>
+                <option value="coverage-options.html">Coverage Options</option>
+                <option value="sample-policy.html">Sample Policy</option>
+                <option value="faq.html">FAQ</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <p class="text-center">Decide Now</p>
+
+        <div class="col-md-6"><button id="waive-footer" name="singlebutton" class="btn btn-block btn-lg btn-danger">Decline Coverage</button></div>
+
+        <div class="col-md-6"><button id="enroll-footer" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll</button></div>
+
+        
+
+    </div>
+  </div>
+</div>
 
     </fieldset>
     </form>
 
   </div>
 				<hr>
-				<div id="footer" class="panel panel-primary">
+				<div id="footer-enroll" class="panel panel-primary">
   <div class="panel-heading footer-panel-heading">
     <h3 class="panel-title text-center" style="font-size:22px;">Enroll or Decline Coverage</h3>
   </div>
   <div class="panel-body">
     <div class="col-sm-4">
-    	<div class="panel-container">
-    		<p>Keep Researching</p>
+        <div class="panel-container">
+            <p>Keep Researching</p>
 
-    		<select name="footer-nav" id="footer-nav" class="col-sm-12">
-    			<option value="">Select A Category</option>
-    			<option value="index.html">Overview</option>
-    			<option value="gap-calculator.html">Income Gap Calculator</option>
-    			<option value="coverage-options.html">Coverage Options</option>
-    			<option value="sample-policy.html">Sample Policy</option>
-    			<option value="faq.html">FAQ</option>
-    		</select>
-    	</div>
+            <select name="footer-nav" id="footer-nav" class="col-sm-12">
+                <option value="">Select A Category</option>
+                <option value="index.html">Overview</option>
+                <option value="gap-calculator.html">Income Gap Calculator</option>
+                <option value="coverage-options.html">Coverage Options</option>
+                <option value="sample-policy.html">Sample Policy</option>
+                <option value="faq.html">FAQ</option>
+            </select>
+        </div>
     </div>
     <div class="col-sm-8">
-    	<p class="text-center">Decide Now</p>
+        <p class="text-center">Decide Now</p>
 
         <div class="col-md-6"><button id="waive-footer" name="singlebutton" class="btn btn-block btn-lg btn-danger">Decline Coverage</button></div>
 
-    	<div class="col-md-6"><button id="enroll-footer" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll</button></div>
+        <div class="col-md-6"><button id="enroll-footer" name="singlebutton" class="btn btn-block btn-lg btn-success">Enroll</button></div>
 
-    	
+        
 
     </div>
   </div>
