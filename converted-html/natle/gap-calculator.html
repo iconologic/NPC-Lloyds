@@ -51,19 +51,20 @@
         <div class="container">
             
 	<div id="masthead">  
-	  <div class="container">
-	      <div class="row">
-	        <div class="col-md-7">
-	          <a href="../index.html">
-	          	<img src="../public/img/logo.jpg" class="logo well-lg">
-	          </a>
-	        </div>
-	        <!-- logo -->
-	        <div class="col-md-5">
-    <div class="well-lg"> 
+
+      <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-7">
+          <a href="../index.html">
+            <img src="../public/img/logo.jpg" class="logo well-lg img-responsive">
+          </a>
+        </div>
+
+        <!-- logo -->
+        <div class="col-xs-6 col-sm-6 col-md-5">
+    <div class=""> 
         <div class="row">
-          <div class="col-sm-6 pull-right">
-            <img src="../public/img/client-logo.png" class="img-responsive">
+          <div class="col-sm-8 pull-right">
+            <img src="../public/img/client-logo.png" class="natle-logo img-responsive">
           </div>
           <!-- <div class="col-sm-6">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptatibus temporibus harum doloribus incidunt fugit, possimus deleniti mollitia hic vitae sunt, pariatur ex dolore repellat cumque impedit dolorem velit tenetur.
@@ -71,137 +72,142 @@
         </div>
     </div>
 </div>
-	      </div> 
-	  </div><!--/container-->
-	</div><!--/masthead-->
+        
+      </div> 
+
+</div><!--/masthead-->
 	<!--main-->
-	<div class="container">
+	<section>
 		<div class="row">
       <!--left-->
       <div class="col-md-3 hidden-xs" id="leftCol">
   <!--left-->
-  <div class="col-md-12" id="leftCol">
-    <ul class="nav nav-stacked" id="sidebar">
-      <li >
-        <a href="../index.html">Overview</a>
-      </li>
-      <li >
-        <a href="../gap-calculator.html">Income Gap Calculator</a>
-      </li>
-      <li >
-        <a href="../coverage-options.html">Your Coverage Options</a>
-      </li>
-      <li >
-        <a href="../sample-policy.html">Sample Policy</a>
-      </li>
-      <li >
-        <a href="../faq.html">FAQ</a>
-      </li>
-      <!-- <li>
-        <a href="#">Enroll Now</a>
-      </li> -->
-    </ul>
+  <div class="row">
+     <div class="col-md-12" id="leftCol">
+       <ul class="nav nav-stacked" id="sidebar">
+         <li >
+           <a href="../index.html">Overview</a>
+         </li>
+         <li >
+           <a href="../gap-calculator.html">Income Gap Calculator</a>
+         </li>
+         <li >
+           <a href="../coverage-options.html">Your Coverage Options</a>
+         </li>
+         <li >
+           <a href="../sample-policy.html">Sample Policy</a>
+         </li>
+         <li >
+           <a href="../faq.html">FAQ</a>
+         </li>
+         <!-- <li>
+           <a href="#">Enroll Now</a>
+         </li> -->
+       </ul>
 
-    <!-- <div style="margin-bottom:25px;"></div>
-    
-    <div class="col-md-12" id="sidebarEnrollContainer">
+       <!-- <div style="margin-bottom:25px;"></div>
+       
+       <div class="col-md-12" id="sidebarEnrollContainer">
 
-      <p class="text-center">Ready to Decide?</p>
-      <hr>
-      <div class="col-md-12"><button id="enroll-sidebar" name="singlebutton" class="btn btn-block btn-lg btn-success btn-sidebar" style="margin-bottom:15px;">Enroll Now</button></div>
-      
-      <div class="col-md-12"><button id="waive-sidebar" name="singlebutton" class="btn btn-block btn-lg btn-danger btn-sidebar">Waive Coverage</button></div>
-    </div>
- -->
-    
+         <p class="text-center">Ready to Decide?</p>
+         <hr>
+         <div class="col-md-12"><button id="enroll-sidebar" name="singlebutton" class="btn btn-block btn-lg btn-success btn-sidebar" style="margin-bottom:15px;">Enroll Now</button></div>
+         
+         <div class="col-md-12"><button id="waive-sidebar" name="singlebutton" class="btn btn-block btn-lg btn-danger btn-sidebar">Waive Coverage</button></div>
+       </div>
+    -->
+       
+     </div>
   </div>
 </div>
 			<!--right-->
-			<div class="col-md-9">
+			<div class="col-md-9 main-content">
 				<h2 id="sec1">Income Gap Calculator</h2>
 
 <!-- <p>retirementAge - age = yearsCovered * annualIncome - additionalPlans = lumpSumTotal</p>
 <p>lumpSumTotal / 12 = lumpSumMonthly</p> -->
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione molestiae atque minima eaque a ullam. Voluptatum aliquam, perspiciatis consectetur, ea veritatis fugiat suscipit temporibus possimus natus modi architecto sit commodi?</p>
+<div class="row">
+  <div class="col-md-6">
+    <form class="form-horizontal">
+    <fieldset>
 
-<div class="col-md-6">
-  <form class="form-horizontal">
-  <fieldset>
-
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-12 control-label calc-label" for="calcAge">Age</label>  
-    <div class="col-md-12">
-    <input id="calcAge" name="calcAge" type="text" placeholder="Enter your current age" class="form-control input-md" maxlength="2" onkeyup="checkInput(this)">
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-12 control-label calc-label" for="calcAge">Age</label>  
+      <div class="col-md-12">
+      <input id="calcAge" name="calcAge" type="text" placeholder="Enter your current age" class="form-control input-md" maxlength="2" onkeyup="checkInput(this)">
+      </div>
     </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-12 control-label calc-label" for="calcIncome">Income</label>  
+      <div class="col-md-12">
+      <input id="calcIncome" name="calcIncome" type="text" placeholder="Enter your gross annual income" class="form-control input-md">
+      </div>
+    </div>
+
+    <!-- Multiple Checkboxes -->
+    <div class="form-group">
+      <label class="col-md-12 control-label calc-label" for="checkboxes">Existing Coverage?</label>
+      <div class="col-md-12">
+      <div class="checkbox">
+        <label for="checkboxes-0">
+          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          Yes, I currently have some disability coverage.
+        </label>
+        <label for="checkboxes-1">
+          <input type="checkbox" name="checkboxes" id="checkboxes-1" value="1">
+          No, I do not have any disability coverage.
+        </label>
+      </div>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div id="optionalCoverage" class="form-group">
+      <label class="col-md-12 control-label calc-label" for="calcPlans">How much does your existing disability plan cover?</label>  
+      <div class="col-md-12">
+      <input id="calcPlans" name="calcPlans" type="text" placeholder="Montly benefit dollar amount" class="form-control input-md"> 
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
   </div>
 
-  <!-- Text input-->
-  <div class="form-group">
-    <label class="col-md-12 control-label calc-label" for="calcIncome">Income</label>  
-    <div class="col-md-12">
-    <input id="calcIncome" name="calcIncome" type="text" placeholder="Enter your gross annual income" class="form-control input-md">
-    </div>
+  <div class="col-md-6">
+
+    <p class="calcText">
+      <!-- Age -->
+      <span id="phraseOne">You have approximately <span class="varThree"></span> years until retirement age.</span>
+      
+      <!-- Income -->
+      <span id="phraseTwo">Considering your current annual income of <span class="varFour"></span></span>
+      
+      <!-- If YES -->
+      <span id="phraseThree">and your disability coverage, which covers <span class="varFive"></span> per year, you would lose <span class="varSeven"></span> of your income each month—and <span class="varEight"></span> between now and retirement—in the event of a disability.</span>
+      
+      <!-- If NO -->
+      <span id="phraseFour">and the fact that you have no disability coverage, you would lose <span class="varSeven"></span> of your income each month—and <span class="varSix"></span> between now and retirement—in the event of a disability.</span>
+    </p>
+
   </div>
 
-  <!-- Multiple Checkboxes -->
-  <div class="form-group">
-    <label class="col-md-12 control-label calc-label" for="checkboxes">Existing Coverage?</label>
-    <div class="col-md-12">
-    <div class="checkbox">
-      <label for="checkboxes-0">
-        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-        Yes, I currently have some disability coverage.
-      </label>
-      <label for="checkboxes-1">
-        <input type="checkbox" name="checkboxes" id="checkboxes-1" value="1">
-        No, I do not have any disability coverage.
-      </label>
-    </div>
-    </div>
+  <div class="col-md-6">
+    <!-- <p><strong>1. retirementAge:</strong> <span class="varOne"></span></p>
+    <p><strong>2. age:</strong> <span class="varTwo"></span></p>
+    <p><strong>3. yearsCovered:</strong> <span class="varThree"></span></p>
+    <p><strong>4. annualIncome:</strong> <span class="varFour"></span></p>
+    <p><strong>5. additionalPlans:</strong> <span class="varFive"></span></p>
+    <p><strong>6. lumpSumTotal:</strong> <span class="varSix"></span></p>
+    <p><strong>7. lumpSumMonthly:</strong> <span class="varSeven"></span></p>
+    <p><strong>8. Total Defecit: <span class="varEight"></span></strong></p> -->
   </div>
-
-  <!-- Text input-->
-  <div id="optionalCoverage" class="form-group">
-    <label class="col-md-12 control-label calc-label" for="calcPlans">How much does your existing disability plan cover?</label>  
-    <div class="col-md-12">
-    <input id="calcPlans" name="calcPlans" type="text" placeholder="Montly benefit dollar amount" class="form-control input-md"> 
-    </div>
-  </div>
-
-  </fieldset>
-  </form>
 </div>
 
-<div class="col-md-6">
-
-  <p class="calcText">
-    <!-- Age -->
-    <span id="phraseOne">You have approximately <span class="varThree"></span> years until retirement age.</span>
-    
-    <!-- Income -->
-    <span id="phraseTwo">Considering your current annual income of <span class="varFour"></span></span>
-    
-    <!-- If YES -->
-    <span id="phraseThree">and your disability coverage, which covers <span class="varFive"></span> per year, you would lose <span class="varSeven"></span> of your income each month—and <span class="varEight"></span> between now and retirement—in the event of a disability.</span>
-    
-    <!-- If NO -->
-    <span id="phraseFour">and the fact that you have no disability coverage, you would lose <span class="varSeven"></span> of your income each month—and <span class="varSix"></span> between now and retirement—in the event of a disability.</span>
-  </p>
-
-</div>
-
-<div class="col-md-6">
-  <!-- <p><strong>1. retirementAge:</strong> <span class="varOne"></span></p>
-  <p><strong>2. age:</strong> <span class="varTwo"></span></p>
-  <p><strong>3. yearsCovered:</strong> <span class="varThree"></span></p>
-  <p><strong>4. annualIncome:</strong> <span class="varFour"></span></p>
-  <p><strong>5. additionalPlans:</strong> <span class="varFive"></span></p>
-  <p><strong>6. lumpSumTotal:</strong> <span class="varSix"></span></p>
-  <p><strong>7. lumpSumMonthly:</strong> <span class="varSeven"></span></p>
-  <p><strong>8. Total Defecit: <span class="varEight"></span></strong></p> -->
-</div>
 
 <div class="clearfix"></div>
 				<hr>
@@ -209,7 +215,7 @@
   <div class="panel-heading footer-panel-heading">
     <h3 class="panel-title text-center" style="font-size:22px;">Learn More</h3>
   </div>
-  <div class="panel-body">
+  <div class="panel-body panel-footer">
     <div class="col-sm-4">
         <div class="panel-container">
             <p>Keep Researching</p>
@@ -236,7 +242,7 @@
 </div>
 			</div>
 	  </div><!--/row-->
-	</div><!--/container-->
+	</section><!--/section-->
 
         </div>
 

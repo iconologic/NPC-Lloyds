@@ -31,11 +31,18 @@ $(function () {
   });
 
   /* FAQ Accordion */
-  $('.collapse').collapse()
+  $('.faq-collapse').collapse();
 
   var active = true;
   $('#accordion').on('show.bs.collapse', function () {
     if (active) $('#accordion .in').collapse('hide');
+    if (active) $('#accordion2 .in').collapse('hide');
+  });
+
+  $('#accordion2').on('show.bs.collapse', function () {
+    if (active) $('#accordion .in').collapse('hide');
+    if (active) $('#accordion2 .in').collapse('hide');
+
   });
 
   // $('.panel-heading').hover(function(){
@@ -67,7 +74,16 @@ $(function () {
     })
     .on('hide.bs.collapse', function(e) {
       $(e.target).prev('.panel-heading').removeClass('active');
-    });          
+    });   
+
+    $('#accordion2')
+    .on('show.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').addClass('active');
+    })
+    .on('hide.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').removeClass('active');
+    });       
+
   });
 
 
@@ -278,8 +294,8 @@ $(function () {
         
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
 
-    $('.varSix').html('$' + lumpSumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-    $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('#phraseTwo').show();
     // $('#phraseFour').show();
 
@@ -336,11 +352,11 @@ $(function () {
 
     monthlyIncomeTotal = optionalIncomeTotal / 12; 
 
-    $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-    $('.varSix').html('$' + lumpSumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-    $('.varEight').html('$' + f.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varEight').html('$' + f.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     $('#phraseFour').hide();
     $('#phraseThree').show();

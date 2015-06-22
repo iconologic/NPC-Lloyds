@@ -294,8 +294,8 @@ $(function () {
         
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
 
-    $('.varSix').html('$' + lumpSumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-    $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('#phraseTwo').show();
     // $('#phraseFour').show();
 
@@ -352,11 +352,11 @@ $(function () {
 
     monthlyIncomeTotal = optionalIncomeTotal / 12; 
 
-    $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-    $('.varSix').html('$' + lumpSumTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-    $('.varEight').html('$' + f.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varEight').html('$' + f.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     $('#phraseFour').hide();
     $('#phraseThree').show();
