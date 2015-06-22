@@ -31,7 +31,7 @@ $(function () {
   });
 
   /* FAQ Accordion */
-  $('.collapse').collapse();
+  $('.faq-collapse').collapse();
 
   var active = true;
   $('#accordion').on('show.bs.collapse', function () {
