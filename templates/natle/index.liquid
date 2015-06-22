@@ -1,0 +1,46 @@
+{% block content %}
+
+	<div id="masthead">  
+	  <div class="container">
+	      <div class="row">
+	        <div class="col-md-7">
+	          <a href="/">
+	          	<img src="{{ "logo.jpg" | asset_url }}" class="logo well-lg">
+	          </a>
+	        </div>
+
+	        <!-- logo -->
+	        {% include "logo" %}
+	        
+	      </div> 
+	  </div><!--/container-->
+	</div><!--/masthead-->
+
+	<!--main-->
+	<div class="container">
+		<div class="row">
+	      
+      <!--left-->
+      {% include "sidebar_v2" %}
+      
+			<!--right-->
+			{% comment %}
+			{% include "content" %}
+			{% endcomment %}
+
+			<div class="col-md-9">
+				
+				{% include "section-data" %}
+			  
+
+			  {% include "section-summary" %}
+			  <hr>
+
+			  {% include "footer" %}
+
+			</div>
+
+	  </div><!--/row-->
+	</div><!--/container-->
+
+{% endblock %}

@@ -1,0 +1,155 @@
+{% block content %}
+
+	<!--main-->
+	<div class="container">
+		<div class="row">
+	      
+      <!--left-->
+      {% include "sidebar_admin" %}
+
+			<div class="col-md-9">
+				
+				<!-- NATLE -->
+				<div id="sec0" class="client-section">
+					
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="col-xs-7 no-padding"><img src="{{ "client-logo.png" | asset_url }}" class="img-responsive"></div>
+						</div>
+
+						<div class="col-sm-6 text-right">
+							<strong><p>Created: 6/22/2015</p></strong>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+
+							<h4>Analytics</h4>
+
+							<table class="table table-striped" style="margin-top:30px;">
+
+								<tr>
+									<th>Page</th>
+									<th>Total Page Views</th>
+								</tr>
+								<tr>
+									<td>Overview</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>Income Gap Calculator</td>
+									<td>240</td>
+								</tr>
+								<tr>
+									<td>Your Coverage Options</td>
+									<td>137</td>
+								</tr>
+								<tr>
+									<td>Sample Policy</td>
+									<td>17</td>
+								</tr>
+								<tr>
+									<td>FAQ</td>
+									<td>53</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-sm-6">
+
+							<h4>Enrollment</h4>
+
+							<table class="table table-striped" style="margin-top:30px;">
+
+								<tr>
+									<th>Status</th>
+									<th>Total</th>
+								</tr>
+								<tr>
+									<td>Enroll</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Decline</td>
+									<td>17</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<!-- Other Client -->
+				<div id="sec1" class="client-section">
+					
+					<div class="row">
+						<div class="col-sm-6">
+							<h1>Other Client</h1>
+						</div>
+
+						<div class="col-sm-6 text-right">
+							<strong><p>Created: 6/22/2015</p></strong>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6">
+
+							<h4>Analytics</h4>
+
+							<table class="table table-striped" style="margin-top:30px;">
+
+								<tr>
+									<th>Page</th>
+									<th>Total Page Views</th>
+								</tr>
+								<tr>
+									<td>Overview</td>
+									<td>40</td>
+								</tr>
+								<tr>
+									<td>Income Gap Calculator</td>
+									<td>240</td>
+								</tr>
+								<tr>
+									<td>Your Coverage Options</td>
+									<td>137</td>
+								</tr>
+								<tr>
+									<td>Sample Policy</td>
+									<td>17</td>
+								</tr>
+								<tr>
+									<td>FAQ</td>
+									<td>53</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-sm-6">
+
+							<h4>Enrollment</h4>
+
+							<table class="table table-striped" style="margin-top:30px;">
+
+								<tr>
+									<th>Status</th>
+									<th>Total</th>
+								</tr>
+								<tr>
+									<td>Enroll</td>
+									<td>135</td>
+								</tr>
+								<tr>
+									<td>Decline</td>
+									<td>17</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+	  </div><!--/row-->
+	</div><!--/container-->
+
+{% endblock %}

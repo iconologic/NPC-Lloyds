@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}L{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Web Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+
+        {{ "bootstrap.css" | asset_url | stylesheet_tag }}
+        {{ "layerslider.css" | asset_url | stylesheet_tag }}
+
+        <style>
+            body,html { height: 100%; }
+            body {
+                height: 100%;
+                background: url('/public/img/bg.png');
+                background-repeat: ;
+            }
+        </style>
+        
+    </head>
+    <body>
+    
+        {% include "navigation" %}
+
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+        <script src="//code.jquery.com/jquery.min.js"></script>
+
+        <script>
+            // Allow ONLY Numbers in Textarea
+            function checkInput(ob) {
+              var invalidChars = /[^0-9]/gi
+              if(invalidChars.test(ob.value)) {
+                ob.value = ob.value.replace(invalidChars,"");
+              }
+            }
+        </script>
+        
+        {{ "bootstrap.js" | asset_url | script_tag }}
+        {{ "scripts.js" | asset_url | script_tag }}
+        {{ "chart.js" | asset_url | script_tag }}
+        <!-- {{ "chart-settings.js" | asset_url | script_tag }} -->
+        {{ "slideshow-v4.js" | asset_url | script_tag }}
+
+        {{ "greensock.js" | asset_url | script_tag }}
+        {{ "layerslider.transitions.js" | asset_url | script_tag }}
+        {{ "layerslider.kreaturamedia.jquery.js" | asset_url | script_tag }}
+
+    </body>
+</html>
