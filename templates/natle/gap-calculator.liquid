@@ -1,30 +1,16 @@
 {% block content %}
 
-	<div id="masthead">  
-	  <div class="container">
-	      <div class="row">
-	        <div class="col-md-7">
-	          <a href="/">
-	          	<img src="{{ "logo.jpg" | asset_url }}" class="logo well-lg">
-	          </a>
-	        </div>
-
-	        <!-- logo -->
-	        {% include "logo" %}
-	        
-	      </div> 
-	  </div><!--/container-->
-	</div><!--/masthead-->
+	{% include "masthead" %}
 
 	<!--main-->
-	<div class="container">
+	<section>
 		<div class="row">
 	      
       <!--left-->
       {% include "sidebar_v2" %}
       
 			<!--right-->
-			<div class="col-md-9">
+			<div class="col-md-9 main-content">
 				
 				{% include "section-calculator" %}
 				<hr>
@@ -34,6 +20,6 @@
 			</div>
 
 	  </div><!--/row-->
-	</div><!--/container-->
+	</section><!--/section-->
 
 {% endblock %}

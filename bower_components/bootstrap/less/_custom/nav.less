@@ -18,7 +18,21 @@ hr {
 }
 
 .logo {
+  width:100%;
   max-width: 225px;
+
+  &.well-lg{
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+.natle-logo{
+  width:100%;
+  max-width: 225px;
+  padding:10px;
+  padding-left: 20px;
+  padding-right:0;
 }
 
 .panel.coverage {
@@ -47,6 +61,7 @@ hr {
 
 #masthead { 
  min-height:100px;
+ margin-top:45px;
 }
 
 #masthead h1 {
@@ -75,6 +90,11 @@ hr {
 }
 
 @media (min-width: 979px) {
+
+  #masthead { 
+   margin-top:0;
+  }
+
   #sidebar.affix-top {
     // position: static;
   	// margin-top:30px;

@@ -31,11 +31,18 @@ $(function () {
   });
 
   /* FAQ Accordion */
-  $('.collapse').collapse()
+  $('.collapse').collapse();
 
   var active = true;
   $('#accordion').on('show.bs.collapse', function () {
     if (active) $('#accordion .in').collapse('hide');
+    if (active) $('#accordion2 .in').collapse('hide');
+  });
+
+  $('#accordion2').on('show.bs.collapse', function () {
+    if (active) $('#accordion .in').collapse('hide');
+    if (active) $('#accordion2 .in').collapse('hide');
+
   });
 
   // $('.panel-heading').hover(function(){
@@ -67,7 +74,16 @@ $(function () {
     })
     .on('hide.bs.collapse', function(e) {
       $(e.target).prev('.panel-heading').removeClass('active');
-    });          
+    });   
+
+    $('#accordion2')
+    .on('show.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').addClass('active');
+    })
+    .on('hide.bs.collapse', function(e) {
+      $(e.target).prev('.panel-heading').removeClass('active');
+    });       
+
   });
 
 
