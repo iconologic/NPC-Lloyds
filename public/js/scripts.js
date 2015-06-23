@@ -236,9 +236,10 @@ $(function () {
 
     annualIncomeTotal = $('#calcIncome').val();
     annualIncomeTotalInteger = parseInt(annualIncomeTotal);
-    monthlyIncomeTotal = annualIncomeTotal / 12;
-
-    $('.varSeven').html('$' + monthlyIncomeTotal.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    
+    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
   });
 
@@ -283,19 +284,20 @@ $(function () {
     age = yearsCovered(getAge);
     annualIncomeTotal = $('#calcIncome').val();
 
-    annualIncomeTotalInteger = (annualIncomeTotal);
+    annualIncomeTotalInteger = parseInt(annualIncomeTotal);
 
     var varFour = $('.varFour').html('$' + annualIncomeTotalInteger.toLocaleString("en").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     
 
     // console.log( varFour.slice( -1 ) );
-
-    monthlyIncomeTotal = annualIncomeTotal / 12;
         
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
-
     $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    
+    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
     $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    
     $('#phraseTwo').show();
     // $('#phraseFour').show();
 
@@ -322,7 +324,7 @@ $(function () {
   $('#calcPlans').keyup(function(){
 
     additionalPlans = $('#calcPlans').val();
-    additionalPlansText = parseInt(additionalPlans);
+    additionalPlansText = parseInt(additionalPlans) * 12;
     $('.varFive').html('$' + additionalPlansText.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
@@ -346,15 +348,11 @@ $(function () {
     f = d * e;
     // console.log('f= ' + f);
 
-
-
-    monthlyIncomeTotal = annualIncomeTotal / 12;
-
-    monthlyIncomeTotal = optionalIncomeTotal / 12; 
-
-    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
-
     $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+
+    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
+    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     $('.varEight').html('$' + f.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
@@ -364,6 +362,22 @@ $(function () {
 
 
   $('calcAge')
-  
+
+
+  // Sortable Tables (FooTable)
+  $('#clientTable').footable();
+
+  $('.sort-column').click(function (e) {
+      e.preventDefault();
+
+      //get the footable sort object
+      var footableSort = $('table').data('footable-sort');
+
+      //get the index we are wanting to sort by
+      var index = $(this).data('index');
+
+      footableSort.doSort(index, 'toggle');
+  });
+
  
 });

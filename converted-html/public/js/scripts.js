@@ -322,7 +322,7 @@ $(function () {
   $('#calcPlans').keyup(function(){
 
     additionalPlans = $('#calcPlans').val();
-    additionalPlansText = parseInt(additionalPlans);
+    additionalPlansText = parseInt(additionalPlans) * 12;
     $('.varFive').html('$' + additionalPlansText.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
@@ -348,9 +348,11 @@ $(function () {
 
 
 
-    monthlyIncomeTotal = annualIncomeTotal / 12;
-
-    monthlyIncomeTotal = optionalIncomeTotal / 12; 
+    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    // console.log(monthlyIncomeVar1);
+    monthlyIncomeVar2 = additionalPlans; 
+    console.log(monthlyIncomeVar2);
+    monthlyIncomeTotal = monthlyIncomeVar1 - monthlyIncomeVar2;
 
     $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
@@ -364,6 +366,22 @@ $(function () {
 
 
   $('calcAge')
-  
+
+
+  // Sortable Tables (FooTable)
+  $('#clientTable').footable();
+
+  $('.sort-column').click(function (e) {
+      e.preventDefault();
+
+      //get the footable sort object
+      var footableSort = $('table').data('footable-sort');
+
+      //get the index we are wanting to sort by
+      var index = $(this).data('index');
+
+      footableSort.doSort(index, 'toggle');
+  });
+
  
 });
