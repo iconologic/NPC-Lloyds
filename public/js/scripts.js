@@ -237,7 +237,7 @@ $(function () {
     annualIncomeTotal = $('#calcIncome').val();
     annualIncomeTotalInteger = parseInt(annualIncomeTotal);
     
-    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeVar1 = annualIncomeTotalInteger / 12;
     monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
     $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
@@ -294,8 +294,9 @@ $(function () {
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
     $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     
-    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeVar1 = annualIncomeTotalInteger / 12;
     monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
+    
     $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     
     $('#phraseTwo').show();
