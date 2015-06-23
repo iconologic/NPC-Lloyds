@@ -299,6 +299,7 @@ $(function () {
     monthlyIncomeVar1 = annualIncomeTotalInteger / 12;
     monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
 
+
     // $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     $('.varSeven').html('$' + monthlyIncomeTotal.format());
     
