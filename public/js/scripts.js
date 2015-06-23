@@ -210,6 +210,11 @@ $(function () {
   // CALCULATOR SCRIPTS
   // ============================
 
+  Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+  };
+
   var retirementAge = 67;
   var age = 0;
   var additionalPlans = 0;
@@ -287,17 +292,15 @@ $(function () {
     annualIncomeTotalInteger = parseInt(annualIncomeTotal);
 
     var varFour = $('.varFour').html('$' + annualIncomeTotalInteger.toLocaleString("en").replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-    
-
-    // console.log( varFour.slice( -1 ) );
         
     lumpSumTotal = lumpSum(age, annualIncomeTotal);
     $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
     
     monthlyIncomeVar1 = annualIncomeTotalInteger / 12;
     monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
-    
-    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+
+    // $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    $('.varSeven').html('$' + monthlyIncomeTotal.format());
     
     $('#phraseTwo').show();
     // $('#phraseFour').show();
@@ -351,9 +354,11 @@ $(function () {
 
     $('.varSix').html('$' + lumpSumTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
-    monthlyIncomeVar1 = annualIncomeTotal / 12;
+    monthlyIncomeVar1 = annualIncomeTotalInteger / 12;
     monthlyIncomeTotal = monthlyIncomeVar1 - additionalPlans;
-    $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+    // $('.varSeven').html('$' + monthlyIncomeTotal.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
+
+    $('.varSeven').html('$' + monthlyIncomeTotal.format());
 
     $('.varEight').html('$' + f.toLocaleString("en").replace(/(\d)(?=(\d{3})+\.)/g, "$1,"));
 
